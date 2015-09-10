@@ -1,0 +1,7 @@
+###
+ep<-read.table("household_power_consumption.txt",sep=";",header=T,stringsAsFactor=FALSE)
+ep[ep$Date %in% c("1/2/2007","2/2/2007"),]
+bks<-seq(0,8,0.5)
+png(filename = "plot1.png",width=480,height=480)
+hist(as.numeric(ep_plot$Global_active_power),bks,col="red",xlab="Global Active Power(kilowatts)",main="Global Active Power")
+dev.off() 
